@@ -1,0 +1,14 @@
+name: Deploy on Push
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Make HTTP request to deployment script
+        run: curl -X GET https://onlineatoz.in/deploy/index.php
