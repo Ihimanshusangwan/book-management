@@ -66,7 +66,7 @@ class UserController
     public function profile()
     {
         $user = $this->auth->user();
-        Response::json($user);
+        Response::json(['success' => true, 'data' => $user]);
     }
 
     #[Route('POST', '/api/user/logout', 'user')]

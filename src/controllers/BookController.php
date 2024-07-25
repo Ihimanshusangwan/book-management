@@ -41,14 +41,14 @@ class BookController {
     #[Route('GET', '/api/books', 'user')]
     public function getAll() {
         $books = $this->bookModel->getAll();
-        Response::json($books);
+        Response::json(['success' => true, 'data' => $books]);
     }
 
     #[Route('GET', '/api/book/{id}', 'user')]
     public function getById($id) {
         $book = $this->bookModel->getById($id);
         if ($book) {
-            Response::json($book);
+            Response::json(['success' => true, 'data' => $book]);
         } else {
             Response::json([ 'success' => true, 'message' => 'Book not found.'], 404);
         }
