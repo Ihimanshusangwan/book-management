@@ -1,0 +1,60 @@
+{
+    "POST": {
+        "\/api\/book\/create": {
+            "controller": "BookController",
+            "method": "create",
+            "role": "user"
+        },
+        "\/api\/user\/register": {
+            "controller": "UserController",
+            "method": "register",
+            "role": null
+        },
+        "\/api\/user\/login": {
+            "controller": "UserController",
+            "method": "login",
+            "role": null
+        },
+        "\/api\/user\/logout": {
+            "controller": "UserController",
+            "method": "logout",
+            "role": "user"
+        }
+    },
+    "GET": {
+        "\/api\/books": {
+            "controller": "BookController",
+            "method": "getAll",
+            "role": "user"
+        },
+        "\/api\/book\/{id}": {
+            "controller": "BookController",
+            "method": "getById",
+            "role": "user"
+        },
+        "\/api\/books\/search": {
+            "controller": "BookController",
+            "method": "search",
+            "role": "user"
+        },
+        "\/api\/user\/profile": {
+            "controller": "UserController",
+            "method": "profile",
+            "role": "user"
+        }
+    },
+    "PUT": {
+        "\/api\/book\/{id}": {
+            "controller": "BookController",
+            "method": "update",
+            "role": "user"
+        }
+    },
+    "DELETE": {
+        "\/api\/book\/{id}": {
+            "controller": "BookController",
+            "method": "delete",
+            "role": "user"
+        }
+    }
+}
