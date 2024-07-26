@@ -1,4 +1,7 @@
 <?php
+namespace Models;
+
+use Core\Database;
 
 class Book {
     private $db;

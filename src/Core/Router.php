@@ -1,4 +1,5 @@
 <?php
+namespace Core;
 
 class Router
 {
@@ -46,14 +47,7 @@ class Router
                 return;
             }
         }
-
-        $this->sendResponse(404, ['success' => false, 'message' => 'Not Found']);
+        Response::json(['success' => false, 'message' => 'Not Found'],404);
     }
-
-    private function sendResponse($statusCode, $data) {
-        http_response_code($statusCode);
-        header('Content-Type: application/json');
-        echo json_encode($data);
-        exit();
-    }
+    
 }

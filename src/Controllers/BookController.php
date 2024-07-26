@@ -1,16 +1,17 @@
 <?php
 
-require_once __DIR__ . '/../core/Database.php';
-require_once __DIR__ . '/../models/Book.php';
-require_once __DIR__ . '/../core/Auth.php';
-require_once __DIR__ . '/../core/Response.php';
+namespace Controllers;
+
+use Models\Book;
+use Helpers\Validator;
+use Core\Response;
+use Core\Route;
+use Exception;
 
 class BookController {
-    private $auth;
     private $bookModel;
 
     public function __construct() {
-        $this->auth = new Auth(new User(), new Session());
         $this->bookModel = new Book();
     }
 

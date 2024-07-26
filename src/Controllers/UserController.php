@@ -1,10 +1,13 @@
 <?php
+namespace Controllers;
 
-require_once __DIR__ . '/../core/Database.php';
-require_once __DIR__ . '/../models/User.php';
-require_once __DIR__ . '/../core/Auth.php';
-require_once __DIR__ . '/../core/Response.php';
-require_once __DIR__ . '/../helpers/Validator.php';
+use Models\User;
+use Core\Auth;
+use Core\Response;
+use Core\Session;
+use Helpers\Validator;
+use Core\Route;
+
 
 class UserController
 {
