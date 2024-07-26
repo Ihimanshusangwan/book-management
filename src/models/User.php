@@ -25,9 +25,9 @@ class User {
         } catch (mysqli_sql_exception $e) {
             if ($e->getCode() === 1062) {
                 $duplicateField = '';
-                if (strpos($e->getMessage(), "for key 'users.username'") !== false) {
+                if (strpos($e->getMessage(), "username") !== false) {
                     $duplicateField = 'Username';
-                } elseif (strpos($e->getMessage(), "for key 'users.email'") !== false) {
+                } elseif (strpos($e->getMessage(), "email") !== false) {
                     $duplicateField = 'Email';
                 } else {
                     $duplicateField = 'Field';
