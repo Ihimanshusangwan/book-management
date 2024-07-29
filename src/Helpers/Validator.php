@@ -1,4 +1,6 @@
 <?php
+ 
+namespace Helpers;
 
 class Validator {
     public static function validate($data, $rules) {

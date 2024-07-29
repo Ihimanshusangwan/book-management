@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../src/Core/autoload.php';
 
-require_once __DIR__ . '/../src/core/Database.php';
+use Core\Database;
 
 $db = Database::getInstance()->getConnection();
 

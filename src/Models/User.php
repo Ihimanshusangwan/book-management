@@ -1,5 +1,10 @@
 <?php
+namespace Models;
 
+use Core\Database;
+use Exception;
+use mysqli_sql_exception;
+use Core\Response;
 class User {
     private $db;
 

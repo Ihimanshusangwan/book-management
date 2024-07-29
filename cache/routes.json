@@ -1,58 +1,58 @@
 {
     "POST": {
         "\/api\/book\/create": {
-            "controller": "BookController",
+            "controller": "Controllers\\BookController",
             "method": "create",
             "role": "user"
         },
         "\/api\/user\/register": {
-            "controller": "UserController",
+            "controller": "Controllers\\UserController",
             "method": "register",
             "role": null
         },
         "\/api\/user\/login": {
-            "controller": "UserController",
+            "controller": "Controllers\\UserController",
             "method": "login",
             "role": null
         },
         "\/api\/user\/logout": {
-            "controller": "UserController",
+            "controller": "Controllers\\UserController",
             "method": "logout",
             "role": "user"
         }
     },
     "GET": {
         "\/api\/books": {
-            "controller": "BookController",
+            "controller": "Controllers\\BookController",
             "method": "getAll",
             "role": "user"
         },
         "\/api\/book\/{id}": {
-            "controller": "BookController",
+            "controller": "Controllers\\BookController",
             "method": "getById",
             "role": "user"
         },
         "\/api\/books\/search": {
-            "controller": "BookController",
+            "controller": "Controllers\\BookController",
             "method": "search",
             "role": "user"
         },
         "\/api\/user\/profile": {
-            "controller": "UserController",
+            "controller": "Controllers\\UserController",
             "method": "profile",
             "role": "user"
         }
     },
     "PUT": {
         "\/api\/book\/{id}": {
-            "controller": "BookController",
+            "controller": "Controllers\\BookController",
             "method": "update",
             "role": "user"
         }
     },
     "DELETE": {
         "\/api\/book\/{id}": {
-            "controller": "BookController",
+            "controller": "Controllers\\BookController",
             "method": "delete",
             "role": "user"
         }

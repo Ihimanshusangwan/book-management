@@ -1,5 +1,7 @@
 <?php
+namespace Core;
 
+use Attribute;
 #[Attribute]
 class Route {
     public string $method;

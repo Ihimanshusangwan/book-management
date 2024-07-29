@@ -1,4 +1,7 @@
 <?php
+namespace Core;
+
+use Models\User;
 
 class Auth {
     private $userModel;
